@@ -25,6 +25,7 @@
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
   border: 1px solid black;
   text-align: center;
   font-size: 30px;
@@ -66,16 +67,16 @@ h3{
 
 h3:hover {
 color: hotpink;
-animation: rubberBand 2s;
--webkit-animation: rubberBand 2s;
+animation: bounceIn 3s;
+-webkit-animation: bounceIn 3s;
 }
 
 div {
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: 'Source Sans Pro', sans-serif;;
 }
 
 nav {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'PT Serif', serif;
 }
 
  html, body { 
@@ -99,7 +100,7 @@ height: 100px;
   height: 600px;
 }
 
-nav {
+/* nav {
 
 }
 
@@ -108,14 +109,44 @@ article {
 }
 footer{
 
-}
+} */
 
 .holo {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(/images/holo.jpg)
+  background-size: 3000px;
+  background-image: url(/images/backgroundpink.pdf)
 }
+
+
 
 h4{
   padding-top: 100px;
+}
+
+.project2 {
+  margin-top: 193px;
+}
+
+.project3 {
+  margin-top: 180px;
+}
+
+.project5 {
+  margin-top: 135px;
+}
+
+.project4 {
+  margin-top: 25px;
+}
+
+.project7 {
+  margin-top: 100px;
+}
+
+.project8 {
+  margin-top: 15px;
+}
+
+.project9 {
+  margin-top: 20px;
 }
