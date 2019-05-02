@@ -1,0 +1,85 @@
+*{box-sizing: border-box;
+}
+
+.wrapper {
+    border-radius: 5px;
+    margin: 0 auto;
+    
+}
+
+.wrapper > div {
+    border-radius: 5px;
+    margin: 10px;
+    background-color:pink;
+    padding: 1em; 
+}
+
+.header {
+    grid-area: h;
+}
+.education {
+    grid-area: e;
+}
+.projects {
+    grid-area: p;
+}
+.skills {
+    grid-area: s;
+}
+.experience {
+    grid-area: x;
+}
+/* .footer {
+    grid-area: f;
+    display: grid;
+    grid-auto-rows: 15% auto 7%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "h"
+        "e"
+        "p"
+        "s"
+        "x"
+        "f";
+} */
+/* @media (min-width: 600px) {
+    .wrapper {
+        grid-template-columns: repeat(9,1fr);
+        grid-template-areas:
+            "h h h h h h h h h"
+            "s s s s m m m m m"
+            "f f f f f f f f f";
+    }
+} */
+
+@media (min-width: 600px) {
+    .wrapper {
+        display:grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            "h h"
+            "x s"
+            "p e"
+            "f f";
+    }
+    
+            .header {
+                grid-area: h;
+            }
+            .education {
+                grid-area: e;
+            }
+            .projects {
+                grid-area: p;
+            }
+            .skills {
+                grid-area: s;
+            }
+            .experience {
+                grid-area: x;
+            }
+            .footer{
+                grid-area: f;
+            }
+}

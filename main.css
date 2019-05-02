@@ -1,33 +1,60 @@
+/* grid setup */
+@media screen and (min-width: 600px){
 .mainContainer {
   display: grid;
   grid-gap: 6px;
   height: 100% ;
+  width: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 20% 10% 40% auto;
   grid-template-areas: 
       "l"
       "n"
+      "i"
       "h"
       "a"
       "f";    
 }
+}
 
+@media (min-width: 600px){
+  .mainContainer {
+    display: grid;
+    grid-gap: 6px;
+    height: 100% ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 10% 40% auto;
+    grid-template-areas: 
+        "l"
+        "h"
+        "n"
+        "a"
+        "f";    
+  }
+  }
+
+/* container for grid */
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-template-rows: repeat(6, 700px);
   grid-gap: 10px;
   background-color: lightpink;
   /* opacity: .5; */
   padding: 10px;
 }
-
 .grid-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  border: 1px solid black;
   text-align: center;
   font-size: 30px;
 }
+/* info for where everything goes on the grid */
 
 .logo {
     grid-area: l;
@@ -36,19 +63,20 @@
 .scroll {
     grid-area: h;
 }
-
 nav {
     grid-area: n;  
 }
 header {
     grid-area: h;
 }
-article {
+.article {
     grid-area: a; 
 }
 footer {
     grid-area: f;
 }
+
+/* text for body */
 
 body {
     /* display: flex; */
@@ -58,9 +86,13 @@ body {
     text-align: center;
    
 }
+
+
 h3{
   text-align: center;
 }
+
+/* set up for h3 */
 
 h3:hover {
 color: hotpink;
@@ -93,21 +125,11 @@ height: 100px;
 }
 .card {
   display: inline-block;
-  width: 300px;
-  height: 600px;
+  /* width: 300px;
+  height: 600px; */
 }
 
-/* nav {
-
-}
-
-article {
-    
-}
-footer{
-
-} */
-
+/* baclground set up */
 .holo {
   background-repeat: no-repeat;
   background-size: 3000px;
@@ -118,43 +140,11 @@ h4{
   padding-top: 100px;
 }
 
-.project1 {
-  margin-top: 100px;
-}
-
-.project2 {
-  margin-top: 193px;
-}
-
-.project3 {
-  margin-top: 180px;
-}
-
-
-.project4 {
-  margin-top: 25px;
-}
-
-.project5 {
-  margin-top: 135px;
-}
-
-.project7 {
-  margin-top: 100px;
-}
-
-.project8 {
-  margin-top: 15px;
-}
-
-.project9 {
-  margin-top: 20px;
-}
 
 .image {
   opacity: 1;
   display: block;
-  width: 100%;
+  width: 400px;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -176,17 +166,68 @@ h4{
   text-align: center;
 }
 
-.container:hover .image {
+/* hover info */
+
+.container:hover img {
   opacity: 0.3;
 }
 
 .container:hover .middle {
-  opacity: 1;
+  opacity: 1
 }
 
+/* type */
 .text {
   background-color: black;
   color: white;
-  font-size: 16px;
+  font-size: 30px;
   padding: 16px 32px;
 }
+
+#resume > a:active{
+  text-decoration: none;
+}
+
+/* social media */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* instagram */
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+a:link {
+  text-decoration: none;
+  color:black;
+}
+
+/* hover design */
+a:hover {
+  color: hotpink;
+}
+
